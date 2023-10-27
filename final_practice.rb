@@ -5,35 +5,62 @@
 
 
 # 1: Write a method named greeting that returns a string with a general greeting. 
-
-# What is the return value of your method?
-# How many arguments did you pass your method?
+def greeting 
+  puts "How y'all doing?"
+end
+greeting
+# What is the return value of your method?  = >  The return value of the greeting method is the string "How y'all doing?"
+# How many arguments did you pass your method?  = >  No argument was passed as there was no parameters pre defined in the method.
 
 
 # 2: Write a method named custom_greeting that returns a greeting WITH a specific name.
-
-# What is the return value of your method?
-# How many arguments did you pass your method?
-# What data type was your argument(s)?
+def custom_greeting(name)
+  puts "Hey #{name}, how are you?"
+end
+custom_greeting("Igor")
+custom_greeting("Kayla")
+# What is the return value of your method?  = >  the return value of the custom_greeting method is the string "hey #{name}, how are you?"
+# How many arguments did you pass your method?  = >  one argument is passed in the method each time, "Igor" or "Kayla"
+# What data type was your argument(s)?  = >  the argument data type is a String.
 
 
 # 3: Write a method named greet_person that takes in 3 strings, a first, middle, and last name, and returns a sentence with the full name.
-
-# What is the return value of your method?
-# How many arguments did you pass your method?
-# What data type was your argument(s)?
+def greet_person (first_name, middle_name, last_name)
+  puts "Hey #{first_name} #{middle_name} #{last_name}, how are you?"
+end
+greet_person("Igor", "Magalhaes", "Marcelino")
+greet_person("Mary Lou", "Akai", "Ferguson")
+# What is the return value of your method?  = >  The return value of the greet_person method is the string "Hey Igor Magalhaes Marcelino, how are you?"
+# How many arguments did you pass your method?  = >  three arguments were passed each time in the method greet_person each time, "igor", "magalhaes", "Marcelino" or "Mary Lou", "Akai", "Ferguson" 
+# What data type was your argument(s)? The arguments data types are strings
 
 
 # 4: Write a method named square that takes in one integer, and returns the square of that integer.
 # Bonus: Print a sentence that interpolates the return value of your square method.
-
-# What is the return value of your method?
-# How many arguments did you pass your method?
-# What data type was your argument(s)?
+def square (num1)
+  puts "The square of #{num1} is #{num1**2}!"
+end
+square(9)
+square(14)
+square(15)
+# What is the return value of your method? The return value of the square method is the string "The square of #{num1} is #{num1**2}!"
+# How many arguments did you pass your method? One argument was passed each time, 9, 14, and 15.
+# What data type was your argument(s)? The arguments data type is an interger.
 
 
 # 5: Write a method named check_stock that satisfies the following interaction pattern:
 # Hint: You will only write one check_stock method that checks the quantity and then prints the corresponding statement.
+
+def check_stock(qnt, item)
+  if qnt >= 4
+    puts "#{item} is stocked"
+  elsif qnt < 4 && qnt > 0
+    puts "#{item} - running LOW!"
+  else 
+    puts "#{item} - OUT of stock!"
+  end
+end
+
 
 check_stock(4, "Coffee");
 # => "Coffee is stocked"
