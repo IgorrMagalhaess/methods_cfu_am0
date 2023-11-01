@@ -6,19 +6,21 @@
 
 # 1: Write a method named greeting that returns a string with a general greeting. 
 def greeting 
-  puts "How y'all doing?"
+  "How y'all doing?"
 end
-greeting
+puts greeting
 # What is the return value of your method?  = >  The return value of the greeting method is the string "How y'all doing?"
 # How many arguments did you pass your method?  = >  No argument was passed as there was no parameters pre defined in the method.
 
 
 # 2: Write a method named custom_greeting that returns a greeting WITH a specific name.
 def custom_greeting(name)
-  puts "Hey #{name}, how are you?"
+  "Hey #{name}, how are you?"
 end
-custom_greeting("Igor")
-custom_greeting("Kayla")
+igor_greeting = custom_greeting("Igor")
+kayla_greeting = custom_greeting("Kayla")
+puts igor_greeting
+puts kayla_greeting
 # What is the return value of your method?  = >  the return value of the custom_greeting method is the string "hey #{name}, how are you?"
 # How many arguments did you pass your method?  = >  one argument is passed in the method each time, "Igor" or "Kayla"
 # What data type was your argument(s)?  = >  the argument data type is a String.
@@ -26,10 +28,12 @@ custom_greeting("Kayla")
 
 # 3: Write a method named greet_person that takes in 3 strings, a first, middle, and last name, and returns a sentence with the full name.
 def greet_person (first_name, middle_name, last_name)
-  puts "Hey #{first_name} #{middle_name} #{last_name}, how are you?"
+  "Hey #{first_name} #{middle_name} #{last_name}, how are you?"
 end
-greet_person("Igor", "Magalhaes", "Marcelino")
-greet_person("Mary Lou", "Akai", "Ferguson")
+igor_full_greeting = greet_person("Igor", "Magalhaes", "Marcelino")
+marylou_full_freeting = greet_person("Mary Lou", "Akai", "Ferguson")
+puts igor_full_greeting
+puts marylou_full_freeting
 # What is the return value of your method?  = >  The return value of the greet_person method is the string "Hey Igor Magalhaes Marcelino, how are you?"
 # How many arguments did you pass your method?  = >  three arguments were passed each time in the method greet_person each time, "igor", "magalhaes", "Marcelino" or "Mary Lou", "Akai", "Ferguson" 
 # What data type was your argument(s)? The arguments data types are strings
@@ -38,11 +42,14 @@ greet_person("Mary Lou", "Akai", "Ferguson")
 # 4: Write a method named square that takes in one integer, and returns the square of that integer.
 # Bonus: Print a sentence that interpolates the return value of your square method.
 def square (num1)
-  puts "The square of #{num1} is #{num1**2}!"
+  "The square of #{num1} is #{num1**2}!"
 end
-square(9)
-square(14)
-square(15)
+square_9 = square(9)
+square_7 = square(7)
+square_15 = square(15)
+puts square_9
+puts square_7
+puts square_15
 # What is the return value of your method? The return value of the square method is the string "The square of #{num1} is #{num1**2}!"
 # How many arguments did you pass your method? One argument was passed each time, 9, 14, and 15.
 # What data type was your argument(s)? The arguments data type is an interger.
